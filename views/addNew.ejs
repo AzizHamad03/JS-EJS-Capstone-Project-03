@@ -1,0 +1,37 @@
+<%- include('partials/header.ejs') %>
+
+    <div class="newBlog">
+        <div class="block">
+            <h2>Enter Your blog</h2>
+            <form action="/" method="post" class="grid newBlogForm">
+                <div><label for="username">Username</label>
+                    <br>
+                    <input type="text" name="name" placeholder="Your name">
+                </div>
+                <div><label for="topics">Select Topic</label>
+                    <br>
+                    <select name="topics">
+                        <option id="placeholderOption" value="" disabled selected>Select topic </option>
+                        <option value="Education">Education</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Health">Health</option>
+                        <option value="Travel">Travel</option>
+                      </select>
+                </div>
+                <div class="grid2">
+                    <label for="text">Blog title</label>
+                    <br>
+                    <input id="titleId" type="text" name="title" placeholder="blog title">
+                </div>
+                <div class="grid2">
+                    <label for="freeform">The body of the blog:</label>
+                    <br>
+                    <textarea name="body" rows="1" cols="50" wrap="physical" id="bodyId"
+                        placeholder="blog body...."></textarea>
+
+                </div>
+                <input class="btn" type="submit" value="Add New Blog">
+            </form>
+        </div>
+    </div>
+    <%- include('partials/footer.ejs') %>

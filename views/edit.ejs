@@ -1,0 +1,37 @@
+<%- include('partials/header.ejs') %>
+
+    <div class="newBlog">
+        <div class="block">
+            <h2>Edit your blog</h2>
+            <form action="/editBlog/<%= blogId %>" method="POST" class="grid newBlogForm">
+                <div><label for="username">Username</label>
+                    <br>
+                    <input type="text" name="name" value="<%= blog.name %>" required>
+                </div>
+                <div><label for="topics">Select Topic</label>
+                    <br>
+                    <select name="topics" required>
+                        <option value="" disabled>Select topic</option>
+                        <option value="Education" <%= blog.topics === 'Education' ? 'selected' : '' %>>Education</option>
+                        <option value="Technology" <%= blog.topics === 'Technology' ? 'selected' : '' %>>Technology</option>
+                        <option value="Health" <%= blog.topics === 'Health' ? 'selected' : '' %>>Health</option>
+                        <option value="Travel" <%= blog.topics === 'Travel' ? 'selected' : '' %>>Travel</option>
+                    </select>
+                </div>
+                <div class="grid2">
+                    <label for="text">Blog title</label>
+                    <br>
+                    <input id="titleId" type="text" name="title" value="<%= blog.title %>" required>
+                </div>
+                <div class="grid2">
+                    <label for="freeform">The body of the blog:</label>
+                    <br>
+                    <textarea name="body" rows="1" cols="50" wrap="physical" id="bodyId"
+                     required><%= blog.body %></textarea>
+
+                </div>
+                <input class="btn" type="submit" value="Save Changes">
+            </form>
+        </div>
+    </div>
+    <%- include('partials/footer.ejs') %>

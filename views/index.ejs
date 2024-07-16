@@ -1,0 +1,51 @@
+<%- include('partials/header.ejs') %>
+<div class="hero">
+    <div class="grid-item">
+        <h2 class="heroTitle">
+            Welcome to Aziz's blog! Where you can share your thoughts freely...
+        </h2>
+    </div>
+    <div class="grid-item">
+        <div class="block">
+            <h3>
+                You can add your own blog here 👇
+            </h3>
+            <form action="/newBlog" method="post">
+                <button class="newButton">Add New Blog</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="blogsList">
+    <h3 class="heroTitle">
+        Recent Blogs
+    </h3>
+    <% if (blogCodeList.length === 0) { %>
+        <div class="emptyDiv">
+            <p>No Blog have been posted yet!</p>
+        </div>
+    <% } else { %>
+        <% for (let index = blogCodeList.length - 1; index >= 0; index--) { %>
+            <div class="blogItem">
+                <h4><%= blogCodeList[index].title %></h4>
+                <h4><%= blogCodeList[index].topics %></h4>
+                <p class="blogAuthor">By <%= blogCodeList[index].name %></p>
+                <hr class="hrBlog" />
+                <div class="blogBody">
+                    <% blogCodeList[index].body.split(/\n\s*\n/).forEach(paragraph => { %>
+                        <p><%= paragraph.trim() %></p>
+                    <% }); %>
+                </div>
+                <div class="blogButtons">
+                    <form action="/editBlog/<%= index %>" method="GET">
+                        <button class="editButton btn" type="submit">Edit</button>
+                    </form>
+                    <form action="/removeBlog/<%= index %>" method="POST">
+                        <button class="removeButton btn" type="submit">Remove</button>
+                    </form>
+                </div>
+            </div>
+        <% } %>
+    <% } %>
+</div>
+<%- include('partials/footer.ejs') %>
