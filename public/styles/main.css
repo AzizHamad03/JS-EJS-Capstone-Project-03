@@ -1,48 +1,56 @@
-.header{
+.header {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #83B4FF;
 }
-.headerBody{
+
+.headerBody {
     margin: 0;
 }
-.home{
+
+.home {
     font-family: cursive;
     color: #FDFFE2;
     font-size: 3rem;
 }
+
 .astext {
-    background:none;
-    border:none;
-    margin:0;
-    padding:0;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
     cursor: pointer;
 }
-.hero{
+
+.hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 20px;
     background-color: #5A72A0;
 }
+
 .grid-item {
     padding: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .heroTitle{
+}
+
+.heroTitle {
     font-size: 4rem;
     font-family: "Gill Sans", sans-serif;
     color: #FDFFE2;
-  }
-  .block{
+}
+
+.block {
     display: block;
     color: #FDFFE2;
     font-size: 3rem;
     font-family: "Gill Sans", sans-serif;
-  }
-  .newButton{
+}
+
+.newButton {
     font-size: 2.5rem;
     margin: 5px;
     padding: 10px;
@@ -52,45 +60,50 @@
     color: #1A2130;
     font-family: "Gill Sans", sans-serif;
     cursor: pointer;
-  }
-  .newBlog{
+}
+
+.newBlog {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #5A72A0 ;
-  }
-  .grid{
+    background-color: #5A72A0;
+}
+
+.grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
-  }
-  
-  .grid2{
+}
+
+.grid2 {
     grid-column: span 2;
-  }
-  #bodyId
-{
-    height:300px;
-    font-size:14pt;
+}
+
+#bodyId {
+    height: 300px;
+    font-size: 14pt;
     margin-top: 5px;
 }
-input{
-    font-size:14pt;
+
+input {
+    font-size: 14pt;
 }
-select{
+
+select {
     font-size: 14pt;
     width: 100%
 }
 
-#titleId{
+#titleId {
     width: 100%;
 }
-.newBlogForm{
+
+.newBlogForm {
     padding-bottom: 50px;
 }
 
-.blogsList{
-    height: auto; 
+.blogsList {
+    height: auto;
     background-color: #1A2130;
     display: flex;
     justify-content: center;
@@ -98,7 +111,7 @@ select{
     flex-direction: column;
 }
 
-.blogItem{
+.blogItem {
     background-color: #fdffe2f7;
     margin: 40px;
     width: 50%;
@@ -108,28 +121,32 @@ select{
     grid-template-columns: 4fr 1fr;
     border-radius: 25px;
 }
-h4{
+
+h4 {
     color: #1A2130;
     font-family: american typewriter, serif;
     font-size: 1.5rem;
     margin-bottom: 0;
 }
-.blogAuthor{
+
+.blogAuthor {
     margin-top: 0;
     grid-column: span 2;
     font-family: american typewriter, serif;
     color: #1a2130a7;
     font-size: 0.8rem;
 }
-.blogBody{
+
+.blogBody {
     grid-column: span 2;
     font-family: "Gill Sans", sans-serif;
     color: #1A2130;
     font-size: 1.2rem;
     margin: 0;
-    margin-right: 4px ;
+    margin-right: 4px;
 }
-.emptyDiv{
+
+.emptyDiv {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,6 +156,7 @@ h4{
     color: #FDFFE2;
 
 }
+
 .hrBlog {
     grid-column: span 2;
     border: none;
@@ -148,12 +166,14 @@ h4{
     margin-right: 10px;
     border-radius: 25%;
 }
-.blogButtons{
+
+.blogButtons {
     grid-column: span 2;
     display: flex;
     justify-content: end;
 }
-.editButton{
+
+.editButton {
     padding: 5px 15px;
     color: white;
     border-radius: 20%;
@@ -163,7 +183,8 @@ h4{
     font-family: "Gill Sans", sans-serif;
     margin: 10px;
 }
-.removeButton{
+
+.removeButton {
     padding: 5px 15px;
     color: white;
     border-radius: 20%;
@@ -173,10 +194,12 @@ h4{
     font-family: "Gill Sans", sans-serif;
     margin: 10px;
 }
-.btn{
+
+.btn {
     cursor: pointer;
 }
-.footer{
+
+.footer {
     background-color: #FDFFE2;
     display: flex;
     justify-content: center;
@@ -185,8 +208,81 @@ h4{
     margin: 0;
     height: 100px;
 }
+
 .footer p {
-    margin:0 ;
+    margin: 0;
     font-size: 1.5rem;
     font-family: cursive;
+}
+
+@media (max-width: 450px) {
+    .header {
+        display: block;
+        padding-left: 20px ;
+    }
+
+    .hero {
+        display: block;
+    }
+    .heroTitle{
+        margin-top: 0;
+        display: block;
+        padding-left: 40px;
+        padding-top: 20px;
+        font-size: 2rem;
+    }
+    h3{
+        padding-left: 40px;
+        padding-top: 20px;
+        font-size: 2rem;
+    }
+    .newButton{
+        padding: 4px;
+        margin-left: 30px;
+    }
+
+    .grid-item {
+        display: block;
+        margin-bottom: 0;
+        margin-top: 20px;
+    }
+
+    .grid {
+        display: block;
+    }
+
+    .newBlog {
+        display: block;
+        padding-left: 7px;
+    }
+
+    textarea {
+        width: 90%;
+    }
+
+    select {
+        width: 90%;
+    }
+
+    #titleId {
+        width: 90%;
+    }
+    .blogsList{
+        display: block;
+        padding-bottom: 15px;
+    }
+    .blogItem{
+        display: block;
+        width: 80%;
+        margin-bottom: 0;
+    }
+    .blogButtons{
+        display: block;
+    }
+    .footer{
+        display: block;
+    }
+    h2{
+        margin-top: 0;
+    }
 }
